@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>111</title>
+    <style>
+        #text{
+          font-size: 48px;
+        }
+        #b{
+          text-align: center;
+          text-decoration: none;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        #buttondiv{
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div><br></div>
+<div id="text"></div>
+<br><br>
+<div class="buttondiv">
+  <button id="b"onClick="window.location.reload();">try again</button>
+</div>
+
+<script>
+    text = "an abstruse,bagpipe,agrees with,an accordion\n" +
+        "an affected,balalaika,arrives with,an acorn squash\n" +
+        "an agreeable,bandoneon,calls for,an acoustic guitar\n" +
+        "an alchemistic,bandura,calls to,an aeolian harp\n" +
+        "an alluring,banjo,carries,an alphorn\n" +
+        "an amber,baritone horn,claims,an alto saxophone\n" +
+        "an amethyst,baron,climbs over,an anvil\n" +
+        "an ancient,baroness,comes with,an archer\n" +
+        "an apricot,baronet,cries over,an aristocracy\n" +
+        "an aqua,bass,cries with,an artichoke\n" +
+        "an aquamarine,bass clarinet,dances with,an avocado\n" +
+        "an arcane,bass drum,dreams of,an earl\n" +
+        "an arch,bass guitar,eats with,an eggplant\n" +
+        "an artificial,bassoon,falls for,an empire\n" +
+        "an astrological,bastion,has,an oboe\n" +
+        "an auburn,battering ram,helps,an ocarina\n" +
+        "an avant-garde,battle axe,holds,an olive\n" +
+        "an azure,bell,is near,an onion\n" +
+        "an eerie,bell pepper,is with,an organ\n" +
+        "an emerald,bone,,a bagpipe\n" +
+        "an enchanted,bongo drum,leaves with,a balalaika\n" +
+        "an enchanting,bouzouki,listens for,a bandoneon\n" +
+        "an engaging,bugle,listens to,a bandura\n" +
+        "an enigmatic,castle,makes,a banjo\n" +
+        "an ensorcelled,catapult,marches to,a baritone horn\n" +
+        "an enthralling,caveman,needs,a baron\n" +
+        "an enticing,cello,pushes,a baroness\n" +
+        "an entranced,celtic harp,runs with,a baronet\n" +
+        "an entrancing,chateau,shows,a bass\n" +
+        "an equivocal,chieftain,walks with,a bass clarinet\n" +
+        "an esoteric,chivalry,wants,a bass drum\n" +
+        "an extraordinary,civilization,stands with,a bass guitar\n" +
+        "an imaginary,clarinet,stands beside,a bassoon\n" +
+        "an impenetrable,clavichord,walks beside,a bastion\n" +
+        "an incomprehensible,clavier,,a battering ram\n" +
+        "an indigo,concertina,,a battle axe\n" +
+        "an inexplicable,conga drum,,a bell\n" +
+        "an inscrutable,contrabass,,a bell pepper\n" +
+        "an insoluble,count,,a bone\n" +
+        "an interesting,countess,,a bongo drum\n" +
+        "an inviting,court jester,,a bouzouki\n" +
+        "an obscure,cowbell,,a bugle\n" +
+        "an occult,crest,,a castle\n" +
+        "an ocher,crossbow,,a catapult\n" +
+        "an olive,crown,,a caveman\n" +
+        "an oracular,daikon,,a cello\n" +
+        "an orange,dance,,a celtic harp\n" +
+        "an orchid,didgeridoo,,a chateau\n" +
+        "an ostentatious,double bass,,a chieftain\n" +
+        "an otherworldly,dragon,,a chivalry\n" +
+        "an ultramarine,drawbridge,,a civilization\n" +
+        "an ultramodern,drum,,a clarinet\n" +
+        "an umber,duchess,,a clavichord\n" +
+        "an uncanny,duke,,a clavier\n" +
+        "an unfathomable,dungeon,,a concertina\n" +
+        "an unknowable,dynasty,,a conga drum\n" +
+        "an unknown,euphonium,,a contrabass\n" +
+        "an unnatural,fava bean,,a count\n" +
+        "an unusual,fiddle,,a countess\n" +
+        "a baffling,flute,,a court jester\n" +
+        "a beautiful,fort,,a cowbell\n" +
+        "a beckoning,fortress,,a crest\n" +
+        "a bewitched,french horn,,a crossbow\n" +
+        "a bewitching,glockenspiel,,a crown\n" +
+        "a blue,gong,,a daikon\n" +
+        "a cabalistic,gourd,,a dance\n" +
+        "a captivating,guitar,,a didgeridoo\n" +
+        "a cardinal,harmonica,,a double bass\n" +
+        "a carmine,harmonium,,a dragon\n" +
+        "a celadon,harp,,a drawbridge\n" +
+        "a cerise,harpsichord,,a drum\n" +
+        "a cerulean,hurdy-gurdy,,a duchess\n" +
+        "a charismatic,kettledrum,,a duke\n" +
+        "a charming,king,,a dungeon\n" +
+        "a chartreuse,knight,,a dynasty\n" +
+        "a clairvoyant,lady,,a euphonium\n" +
+        "a comely,lady-in-waiting,,a fava bean\n" +
+        "a conjuring,lance,,a fiddle\n" +
+        "a copper,landscape,,a flute\n" +
+        "a coral,leek,,a fort\n" +
+        "a covert,lord,,a fortress\n" +
+        "a crimson,lute,,a French horn\n" +
+        "a cryptic,lyre,,a glockenspiel\n" +
+        "a curious,maid,,a gong\n" +
+        "a cyan,maiden,,a gourd\n" +
+        "a dark,mandolin,,a guitar\n" +
+        "a demoniac,manor,,a harmonica\n" +
+        "a diabolic,marimba,,a harmonium\n" +
+        "a difficult,modern man,,a harp\n" +
+        "a fair,monarch,,a harpsichord\n" +
+        "a far out,mung bean,,a hurdy-gurdy\n" +
+        "a fascinating,mushroom,,a kettledrum\n" +
+        "a fascinating,musical saw,,a king\n" +
+        "a fetching,noble,,a knight\n" +
+        "a fiendish,palace,,a lady\n" +
+        "a fuchsia,parsnip,,a lady-in-waiting\n" +
+        "a furtive,peanut,,a lance\n" +
+        "a ghostly,penny whistle,,a landscape\n" +
+        "a glamorous,piano,,a leek\n" +
+        "a gold,piccolo,,a lord\n" +
+        "a good-looking,pipe organ,,a lute\n" +
+        "a gorgeous,potato,,a lyre\n" +
+        "a green,prince,,a maid\n" +
+        "a grey,princess,,a maiden\n" +
+        "a handsome,pumpkin,,a mandolin\n" +
+        "a haunted,queen,,a manor\n" +
+        "a hidden,radish,,a marimba\n" +
+        "a hunky,rainstick,,a modern man\n" +
+        "a jade,recorder,,a monarch\n" +
+        "a lavender,rhubarb,,a mung bean\n" +
+        "a lilac,rutabaga,,a mushroom\n" +
+        "a lime,saxophone,,a musical saw\n" +
+        "a looker,scepter,,a noble\n" +
+        "a lovely,serf,,a palace\n" +
+        "a luring,shield,,a parsnip\n" +
+        "a magenta,sitar,,a peanut\n" +
+        "a magic,sousaphone,,a penny whistle\n" +
+        "a magical,squash,,a piano\n" +
+        "a magnetic,stone,,a piccolo\n" +
+        "a magnetic,sweet potato,,a pipe organ\n" +
+        "a mannered,sword,,a potato\n" +
+        "a maroon,synthesizer,,a prince\n" +
+        "a marvelous,tambourine,,a princess\n" +
+        "a mauve,theremin,,a pumpkin\n" +
+        "a mesmeric,thumb piano,,a queen\n" +
+        "a miraculous,tomatillo,,a radish\n" +
+        "a mod,tower,,a rainstick\n" +
+        "a mustard,triangle,,a recorder\n" +
+        "a mysterious,trombone,,a rhubarb\n" +
+        "a mystic,trumpet,,a rutabaga\n" +
+        "a mystical,tuba,,a saxophone\n" +
+        "a mystifying,turnip,,a scepter\n" +
+        "a mythical,ukulele,,a serf\n" +
+        "a necromantic,vibraphone,,a shield\n" +
+        "a necromantic,village,,a sitar\n" +
+        "a parapsychological,viola,,a sousaphone\n" +
+        "a periwinkle,violin,,a squash\n" +
+        "a perplexing,water chestnut,,a stone\n" +
+        "a pink,xylophone,,a sweet potato\n" +
+        "a pleasant,yam,,a sword\n" +
+        "a pleasing,zither,,a synthesizer\n" +
+        "a posturing,accordion,,a tambourine\n" +
+        "a prepossessing,acorn squash,,a theremin\n" +
+        "a pretty,acoustic guitar,,a thumb piano\n" +
+        "a provocative,aeolian harp,,a tomatillo\n" +
+        "a purple,alphorn,,a tower\n" +
+        "a puzzling,alto saxophone,,a triangle\n" +
+        "a recondite,anvil,,a trombone\n" +
+        "a red,archer,,a trumpet\n" +
+        "a rose,aristocracy,,a tuba\n" +
+        "a ruby,artichoke,,a turnip\n" +
+        "a runic,,,a ukulele\n" +
+        "a sapphire,earl,,a vibraphone\n" +
+        "a scarlet,eggplant,,a village\n" +
+        "a secretive,empire,,a viola\n" +
+        "a seductive,oboe,,a violin\n" +
+        "a sienna,ocarina,,a water chestnut\n" +
+        "a silver,olive,,a xylophone\n" +
+        "a slate,onion,,a yam\n" +
+        "a sorcerous,organ,,a zither\n" +
+        "a spectral,,,agriculture\n" +
+        "a spellbinding,,,alfalfa\n" +
+        "a spellbound,,,ancestors\n" +
+        "a sphinxlike,,,armor\n" +
+        "a spiritual,,,arrows\n" +
+        "a spiritualistic,,,art\n" +
+        "a spooky,,,artifacts\n" +
+        "a strange,,,arugula\n" +
+        "a stunning,,,asparagus\n" +
+        "a subjective,,,axes\n" +
+        "a symbolic,,,bamboo shoots\n" +
+        "a taking,,,basil\n" +
+        "a tangerine,,,beets\n" +
+        "a tantalizing,,,black-eyed peas\n" +
+        "a taupe,,,blades\n" +
+        "a teal,,,boats\n" +
+        "a teasing,,,broccoli\n" +
+        "a telekinetic,,,canoes\n" +
+        "a tempting,,,cauliflower\n" +
+        "a terracotta,,,cave art\n" +
+        "a thaumaturgic,,,celeriac\n" +
+        "a topaz,,,celery\n" +
+        "a tranced,,,ceremonies\n" +
+        "a transcendental,,,chick peas\n" +
+        "a turquoise,,,chisels\n" +
+        "a veiled,,,collard greens\n" +
+        "a vermilion,,,crown jewels\n" +
+        "a violet,,,dandelion greens\n" +
+        "a viridian,,,evolution\n" +
+        "a weird,,,farming\n" +
+        "a weird,,,fennel\n" +
+        "a wild,,,firewood\n" +
+        "a winning,,,garlic\n" +
+        "a winsome,,,geology\n" +
+        "a witching,,,ginger\n" +
+        "a witchlike,,,glaciers\n" +
+        "a wizardly,,,hammers\n" +
+        "a wonderful,,,honor\n" +
+        ",,,hunter-gatherers\n" +
+        ",,,ice sheets\n" +
+        ",,,inventions\n" +
+        ",,,kale\n" +
+        ",,,kohlrabi\n" +
+        ",,,lettuce\n" +
+        ",,,maize\n" +
+        ",,,mallets\n" +
+        ",,,maracas\n" +
+        ",,,murals\n" +
+        ",,,mustard greens\n" +
+        ",,,needles\n" +
+        ",,,nomads\n" +
+        ",,,okra\n" +
+        ",,,parsley\n" +
+        ",,,peppers\n" +
+        ",,,pottery\n" +
+        ",,,religious ceremonies\n" +
+        ",,,royalty\n" +
+        ",,,seaweed\n" +
+        ",,,settlements\n" +
+        ",,,spinach\n" +
+        ",,,spoons\n" +
+        ",,,sprouts\n" +
+        ",,,statues\n" +
+        ",,,stone\n" +
+        ",,,succotash\n" +
+        ",,,swiss chard\n" +
+        ",,,taro\n" +
+        ",,,transformation\n" +
+        ",,,tubular bells\n" +
+        ",,,wasabi\n" +
+        ",,,watercress";
+
+    adj = {};
+    subj = {};
+    verb = {};
+    obj = {};
+
+    dicts = [adj, subj, verb, obj];
+    dictCounts = [0, 0, 0, 0];
+
+    colorVals = [255, 255, 255];
+
+    var lines = text.split('\n');
+    for (let i=0; i<lines.length; i++){
+        var words = lines[i].split(',');
+        for (let j=0; j<words.length; j++){
+            if (words[j] != ''){
+                dicts[j][dictCounts[j]] = words[j];
+                dictCounts[j] += 1;
+            }
+        }
+    }
+
+    function makeScenario(){
+        var scenario = '';
+        for (let i=0; i<dicts.length; i++){
+            scenario += dicts[i][Math.floor(Math.random() * dictCounts[i])];
+            if (i<dicts.length-1){
+                scenario += ' ';
+            }
+            else{
+                scenario += '.';
+            }
+        }
+        return scenario
+    }
+
+    function hexToString(arr){
+        var hex = "#";
+        for (let i=0; i<3; i++){
+            var strHex = arr[i].toString(16);
+            if (strHex.length < 2){
+                hex += "0";
+            }
+            hex += strHex;
+        }
+        return hex;
+    }
+
+    function randomHex(level){
+        var arr = [];
+        for (let i=0; i<3; i++){
+            arr.push(level + Math.floor(Math.random() * 56));
+        }
+        return hexToString(arr);
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var textDiv = document.getElementById("text");
+        document.body.style.transition = "0.3s";
+        textDiv.style.transition = "0.3s";
+        var colorLevel =
+        <!-- SPLIT HERE -->
+        ;
+        if (colorLevel > 100){
+            textDiv.style.color = "#000000";
+        }
+        else{
+            textDiv.style.color = "#FFFFFF";
+        }
+
+        document.body.style.backgroundColor = randomHex(colorLevel);
+        textDiv.innerHTML = makeScenario();
+    });
+</script>
+</body>
+</html>
